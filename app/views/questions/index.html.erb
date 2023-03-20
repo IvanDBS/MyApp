@@ -1,0 +1,21 @@
+<h1 class="mb-4"> Questions </h1>
+
+<% @questions.each do |question| %>
+
+<article class="card">
+  <div class="card-body">
+    <h4><%= question.title %> </h4>
+
+      <section class="card-text">
+        <p class="my-2">
+          <%= question.body %>
+        </p>
+      </section>
+    
+      <%= link_to 'Show', question_path(question), class: "btn btn-primary" %> 
+      <%= link_to 'Edit', edit_question_path(question), class: 'btn btn-secondary' %> 
+      <%= link_to 'Delete', question_path(question), class: 'btn btn-danger', data: {method: :delete, confirm: 'Are u sure?'} %>
+    </div>
+  </article>
+  <br>
+<% end %>
