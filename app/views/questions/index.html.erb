@@ -1,8 +1,11 @@
 <h1 class="mb-4"> Questions </h1>
 
+<%= link_to 'New question', new_question_path, class: 'btn btn-success'%>
+
+
 <% @questions.each do |question| %>
 
-<article class="card">
+<article class="card mt-3">
   <div class="card-body">
     <h4><%= question.title %> </h4>
 
@@ -17,5 +20,4 @@
       <%= link_to 'Delete', question_path(question), class: 'btn btn-danger', data: {method: :delete, confirm: 'Are u sure?'} %>
     </div>
   </article>
-  <br>
 <% end %>
