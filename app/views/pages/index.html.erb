@@ -1,3 +1,6 @@
-<h1> Welcome to: app > views > pages > index.html.erb </h1>
+<% currently_at 'Home' %>
+<% provide :page_title %>
 
-Time now: <%= Time.now  %>
+<h1>Welcome to AskIt!</h1>
+
+&copy; Questions <%= Time.now.year %>
