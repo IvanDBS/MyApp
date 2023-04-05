@@ -5,7 +5,7 @@ ruby '2.7.3'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'jbuilder', '~> 2.7'
-gem 'kaminari', '~> 1.2'
+gem 'pagy', '~> 4.10'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'sass-rails', '>= 6'
