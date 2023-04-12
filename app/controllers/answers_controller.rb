@@ -13,8 +13,11 @@ class AnswersController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def create
-    @answer = @question.answers.build answer_params 
+    @answer = @question.answers.build answer_params
 
     if @answer.save
       flash[:success] = "Answer created!"
@@ -23,7 +26,6 @@ class AnswersController < ApplicationController
       @answers = @question.answers.order created_at: :desc
       render 'questions/show'
     end
-
   end
 
   def destroy
@@ -40,7 +42,7 @@ class AnswersController < ApplicationController
 
   def set_question!
     @question = Question.find params[:question_id]
-  end 
+  end
 
   def set_answer!
     @answer = @question.answers.find params[:id]
